@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id='container'></div>
+
+    <script>
+        // First create new node to add        
+        const container = document.querySelector('#container');
+
+        // Then add
+        let pixel;
+        for (i = 0; i < 16; i++) {
+            pixel = document.createElement('div');
+            container.appendChild(pixel);
+            pixel.style.background = "red";
+            pixel.style.width = "25%";
+            pixel.className = "pixel";
+        }
+
+        const pixel_list = document.querySelectorAll('.pixel');
+
+        pixel_list.forEach((px) => {
+            console.log(px);
+            px.addEventListener('mouseover', () => {
+                px.style.background = "blue";
+            });
+        });
+
+
+
+        
+        
+
+        // Then adjust CSS
+        
+
+    </script>
+</body>
+</html>
